@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table :</title>
+
+    <style>
+        .dot { font-size: 30px; ;
+            text-align: center;
+            font-family: cursive;
+        }
+.on{
+    background-image:url(https://i.ytimg.com/vi/laMazKLTfJk/maxresdefault.jpg)
+}
+.row{color:maroon}
+    </style>
+</head>
+
+<body class="on">
+
+    <h1 class="dot" >Table :</h1>
+    <div class="dot">
+        <form onsubmit="printTable(); return false">
+            <label  class="row" for="table">Enter a number here:</label>
+            <input  type="number" placeholder="enter a number here" id="number" min="1" required>
+            <br><br>
+           <div> <button type="submit"> submit</button></div>
+        </form>
+    </div>
+
+    <div>
+       <table><h4 class="dot" id="result"></h4></table>
+    </div>
+    <script>
+        function printTable() {
+            let input = +document.querySelector("#number").value
+            document.querySelector("#result").innerHTML = ""
+            for (let i = 0; i < 10; i++) {
+                document.querySelector("#result").innerHTML +=
+                `<h3>${input} x ${i + 1} = ${input * (i + 1)}</h3>`
+            }
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
